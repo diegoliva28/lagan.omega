@@ -86,8 +86,10 @@
         "logo txt";
         .footer__logo{
             grid-area: logo;
-            img{
-                width: 150px;
+            a{
+                img{
+                    width: 150px;
+                }
             }
         }
         .footer__redes{

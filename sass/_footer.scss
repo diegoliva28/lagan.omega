@@ -4,17 +4,31 @@
     grid-area: footer;
     text-align: center;
     .footer__logo{
-        img{
-            width: 200px;
+        a{
+            img{
+                width: 200px;
+                transition: transform .5s;
+                &:hover{
+                   transform: scale(1.1); 
+                }
+            }
         }
     }
     .footer__redes{
+        margin: 20px 0;
         list-style: none;
         display: flex;
         justify-content: center;
-        gap: 10px;
+        gap: 20px;
         a{
             text-decoration: none;
+            img{
+                width: 45px;
+                transition: all .5s;
+                &:hover{
+                    width: 55px;
+                }
+            }
         }
     }
     .footer__txt{
