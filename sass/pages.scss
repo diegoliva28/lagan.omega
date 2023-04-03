@@ -1,392 +1,246 @@
+@import "mixins";
+@import "variables";
+
+
 body{
     padding: 0px;
     margin: 0px;
-    background-color: rgb(20, 136, 182) !important;
+    background: map-get($back-color, body ) !important;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
 }
 
 .boton{
     padding: 10px;
     text-decoration: none;
-    background-color: rgb(0, 225, 255);
-    border-radius: 10px;
+    background-color: map-get($back-color , boton );
+    border-radius: $radius;
     cursor: pointer;
     font-size: 1.5em;
+    &:hover{
+        background: map-get($back-color, hover );
+    }
 }
 
-.grid-container{
-    grid-template-areas:
-    "hea hea hea"
-    "mai mai mai"
-    "foo foo foo";
+@import "header";
 
-}
+/* Main GENERAL */
+.main{
+    padding: 10px 40px;
+    grid-area: main;
+    }
 
-#header{
-    grid-area: hea;
-}
+//MAIN ANIME
 
-#main{
-    grid-area: mai;
-}
-
-#footer{
-    grid-area: foo;
-}
-/* HEADER */
-
-#header{
-    border-bottom: 3px solid black;
-    background-color: rgb(14, 149, 211);
-    grid-area: header;
-    display: grid;
-    grid-template-columns:1fr 3fr 1fr;
-    .header__logo{
-        align-self: center;
-        text-align: center;
-        h1{
-            font-size: 1.8em;
-            font-weight:500;
-        }
-        
+.mainAnime{
+    h2{
+        font-size:3em;
+        margin: 1% 0;
+    }
+    .main__img{
+        display: flex;
+        row-gap: 40px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin:10px 0;
         img{
-            width: 130px;
-        }
-        :hover{
-            color: white;
+            width: 32%;
+            height: auto;
+            border-radius: $radius;
         }
     }
-    .header__nav{
-        ul{
-            height: 100%;
-            border-left: 3px solid black;
-            border-right: 3px solid black;
+    @include Mobile{
+        &{
+            flex-direction: column;
+            padding: 5px 20px;
+            h2{
+                font-size: 2em;
+            }
+            .main__img{
+                row-gap: 20px;
+                img{
+                    width:48%;
+                    height: 150px;
+                }
+            }
+        }
+    }
+}
+
+//MAIN NOTICIAS
+
+.mainNoticias{
+    .main__video {
+        h2{
+        font-size: 3em;
+        margin:1% 0 ;
+        }
+        .main__iframe{
+            width: 75%;
+            iframe{
+                width: 100%;
+                height:700px;
+      }
+        }
+    }
+    .main__noticias{
+        h3{
+            font-size: 35px;
+        }
+        .main__noticiasDiv{
             display: flex;
-            align-items: center;
-            justify-content: space-around;
-            gap: 20px;
-            list-style: none;
-            padding: 0%;
-            li{
-                a{
-                    color: black;
-                    font-size: 1.8em;
-                    font-weight: 450;
-                    text-decoration: none;
-                    &:hover{
-                        color: white;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 30px;
+            div{
+                background-color: rgb(18, 204, 204);
+                width: 48%;
+                padding: 10px;
+                border: 2px solid black;
+                display: flex;
+                gap: 30px;
+                font-size: 20px;
+                img{
+                    width: 30%;
+                } 
+            }
+        }
+    }
+    @include Mobile{
+        padding: 5px 20px;
+        .main__video{
+            h2{
+                font-size: 2em
+            }
+            .main__iframe{
+                width: 100%;
+                iframe{
+                    height: 400px
+                }
+            }
+        }
+        .main__noticias{
+            margin: 10px 0;
+            .main__noticiasDiv{
+                flex-direction: column;
+                div{
+                    width: 100%
+                }
+            }
+        }
+    }
+}
+
+//MAIN CRONOGRAMA
+
+.container-fluid{
+    padding: 10px 40px;
+    h2{
+        font-size: 3em;
+        margin:1% 0 ;
+        @include Mobile{
+                font-size: 2em;
+                margin-bottom: 10px;
+        }
+    }
+    .tamaño{
+        height: 445px;
+        overflow-y: scroll;
+        .dias{
+            background-color: rgb(110, 198, 252);
+            border-radius:10px;
+            border: 1px solid #000000;
+            text-align: center;
+            a{
+                font-size: 20px;
+                margin: 0% 2%;
+            }
+        }
+        div{
+            h3{
+                font-size: 2em;
+            }
+            .list{
+                width: 20%;
+                padding: 10px;
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+                img{
+                    width: 100%;
+                }
+                div{
+                    min-width: 200px;
+                    h4{
+                        margin: 0%;
+                    }
+                    p{
+                        margin: 0%;
+                    }
+                }
+            }
+        }
+        @include Mobile{  
+        .dias{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+        }
+        div{
+            .list{
+                flex-direction: row;
+                gap: 10px;
+                img{
+                    width: 150px
                     }
                 }
             }
         }
     }
-    .header__login{
-        align-self: center;
-        padding:0 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        input{
-            margin: 0%;
-            border-radius: 10px;
-            font-size: 1.2em;
+}
+
+//MAIN CONTACTO
+ .mainContacto{
+    padding: 10px;
+    .welcome{
+        margin-top: 10px;
+        text-align: center;
+        line-height: 3em;
+        img{
+            width: 33%;
+            min-width: 300px;
+            border-radius: 20px;
+        }
+        .text1{
+            font-size: 1.5em;
+        }
+        .text2{
+            display: none;
+            }
+    }
+    #mensaje{
+        background-color: rgb(93, 194, 201);
+        border-radius: 20px;
+        padding: 10px;
+    }
+    @include Mobile{
+        .welcome{
+            .text1{
+                display: none;
+            }
+            .text2{
+                display: block;
+                font-size: 2em
+            }
         }
     }
 }
-
-
-/* a:active{
-    background-color: white;
-    color: black;
-} */
-
-/* a:visited{
-    color: rgb(64, 0, 227);
-} */
-
-
-/* Main */
-
-#main{
-  /*   background-color: rgb(23, 103, 207);
- */
-    padding: 0 40px;
-}
-
-/* Main noticias */
-
-.main__video h2{
-    font-size: 2em;
-    margin:1% 0 ;
-}
-
-.main__iframe{
-    width: 75%;
-}
-
-.main__video iframe{
-    width: 100%;
-    height:700px;
-    min-height: 300px;
-}
-
-.main__noticias h3{
-    font-size: 35px;
-}
-
-.main__noticiasDiv{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 30px;
-}
-
-.main__noticiasDiv div{
-    background-color: rgb(18, 204, 204);
-    width: 48%;
-    padding: 10px;
-    border: 2px solid black;
-    display: flex;
-    gap: 30px;
-    font-size: 20px;
-}
-
-.main__noticiasDiv div img{
-    width: 30%;
-}
-
-/* MAIN Cronograma */
-
-.container-fluid{
-    margin-top: 1%;
-}
-
-.dias{
-    background-color: rgb(110, 198, 252);
-    border-radius:10px;
-    border: 1px solid black;
-    text-align: center;   
-}
-
-.dias a{
-    font-size: 20px;
-    margin: 0% 2%;
-}
-
-.list{
-    width: 20%;
-    padding: 10px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.list div{
-    min-width: 200px;
-}
-
-.list p, .list h4{
-    margin: 0%;
-}
-
-.list img{
-    width: 100%;
-}
-
-.tamaño{
-    height: 445px;
-    overflow-y: scroll;
-}
-
-/* Main contacto */
-.welcome{
-    margin-top: 10px;
-    text-align: center;
-    line-height: 3em;
-}
-
-.welcome img{
-    width: 33%;
-    min-width: 300px;
-    border-radius: 20px;
-}
-
-.welcome p{
-    font-size: 1.5em;
-}
-
-#mensaje{
-    background-color: rgb(93, 194, 201);
-    border-radius: 20px;
-    padding: 10px;
-}
-
-.text2{
-    display: none;
-}
-
-/* Footer */
-
-
-
-#footer{
-    margin-top: 20px;
-    background-color: rgb(23, 103, 207);
-    text-align: center;
-    padding: 20px;    
-}
-
-.footer__logo img{
-    width:150px;
-}
-
-.footer__redes{
-    list-style: none;  
-     display: flex;
-     gap: 10px;
-     justify-content: center;
- 
-}
-
-.footer__txt{
-    font-size: 20px;
-    font-weight: 400;
-    line-height:10px;
-}
-
-
-
-/* Footer especial del cronograma */
-
-@media(max-width:480px){
-    #header{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 0.3fr;
-        border: none;
-    }
-    .header__logo {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    .header__logo h1 {
-        font-size: 20px;
-    }
-
-    .header__logo img {
-        width: 70px;
-        height: auto;
-    }
-
-    .header__nav .listas{
-        display: none;
-    }
-
-    .header__nav{
-        border-top: 2px solid black;
-        margin-top: 2px;
-    }
-
-    .header__nav .mobile{
-        margin: 0%;
-        padding: 0%;
-        display: flex;
-        font-size: 1em;
-    }
-
-    .header__nav .mobile li{
-        width: 100%;
-        border-radius:0%;
-        text-align: center;
-        background-color: rgb(14, 168, 188);
-        border-right: 1px solid black ;
-        border-left: 1px solid black;
-        padding: 5px;
-    }
   
-    .header__login{
-        display: none;
-    }
-    #main{
-        padding:0 20px;
-        flex-direction: column;
-    }
 
-    /* Main noticias */
-    .main__iframe iframe{
-        width: 430px;
-        height: 300px;
-    }
-    .main__noticiasDiv{
-        flex-direction: column;
-    }
-    .main__noticiasDiv div{
-        width: 100%;
-    }
 
-    /* Main cronograma */
-
-    .dias{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .list{
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    .list img{
-        width: 150px;
-    }
-
-    /* Main contacto */
-    .text1{
-        display: none;
-    }
-
-    .text2{
-        display: block;
-    }
-
-    /* Footer */
-    #footer{
-        display: grid;
-        grid-template-areas:
-        "logo redes redes"
-        "logo txt txt";
-    }
-
-    .footer__logo{
-        grid-area:logo;
-        align-self: center;
-    }
-
-    .footer__redes{
-        grid-area:redes;
-    }
-
-    .footer__txt{
-        grid-area:txt;
-    }
-
-    .footer__logo img {
-        width: 100px;
-    }
-
-    .footer__redes {
-        font-size: 15px;
-        padding: 0%;
-    }
-
-    .footer__txt {
-        font-size: 15px;
-    }
-    .boton{
-        font-size: 1em;
-    }
-}
+@import "footer";
+@import "RespoMobile";

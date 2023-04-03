@@ -1,19 +1,5 @@
-/* RESPONSIVE */
-
 @import "variables";
-
 @media (max-width:$mobile) {
-    body{
-        grid-template-areas:
-        "header"
-        "article"
-        "section"
-        "aside"
-        "footer";
-        grid-template-columns: 1fr;
-/*         grid-template-rows: repeat(5,auto)
- */    }
-   
     #header{
         border: none;
         display: flex;
@@ -49,30 +35,6 @@
         }
     }
 
-    #article{
-        .article__mobile{
-            display: block;
-            font-size: 2em;
-            margin: 10px 0;
-        }
-        .article__series{
-        
-            .article__seriesIMG{
-                img{
-                    width: 250px;
-                }
-            }
-        }
-    }
-    #section{
-        display: flex;
-        flex-direction: column;
-    }
-    #aside{
-        .aside__notificacion{
-            margin:10px 20px;
-        }
-    }
     #footer{
         padding: 10px;
         display: grid;

@@ -121,6 +121,7 @@ body {
 
 #aside {
   grid-area: aside;
+  margin: 0 10px;
 }
 #aside .aside__cronograma {
   display: flex;
@@ -284,7 +285,7 @@ body {
   }
   #header .header__nav ul li {
     padding: 5px;
-    border: 3px solid black;
+    border: 2px solid black;
     background: rgb(8, 191, 191);
     width: 100%;
     text-align: center;

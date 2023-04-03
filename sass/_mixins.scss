@@ -5,3 +5,8 @@
         display: none;
     }
 }
+@mixin  Mobile{
+    @media (max-width:#{$mobile}) {
+        @content
+    }
+}
