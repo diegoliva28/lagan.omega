@@ -18,7 +18,7 @@
         .crono__div{
             background:map-get($back-color, asiCrono );
             border: $border;
-            padding: 10px;
+            padding: 5px;
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -26,6 +26,24 @@
                 display: flex;
                 flex-direction: row;
                 gap: 10px;
+                transition: all .5s;
+                overflow: hidden;
+                &:hover{
+                    transform: scale(1.02);
+                    background-color: rgb(21, 182, 182);
+                }
+                a{
+                    text-decoration: none;
+                    color: black;
+                    width: 100%;
+                    h3{
+                        padding-left: 0;
+                        border: none;
+                    }
+                    &:hover{
+                        color: white;
+                    }
+                }
                 img{
                     width: 30%;
                 }

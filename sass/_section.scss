@@ -12,9 +12,53 @@
         }
         .section__principalIMG{
             margin-right: 10px;
-            img{
+            .contenedor{
+                position: relative;
                 width: 100%;
-            }
+                overflow: hidden;
+                .image{
+                    width: 100%;
+                    height: 100%;
+                    img{
+                        border-radius: 5px;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: .5s ease;
+                        }
+                    }
+                .text{
+                    padding: 25px;
+                    font-size: 1rem;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(0, 0, 0, 0.48);
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: start;
+                    justify-content: end;
+                    flex-direction: column;
+                    color: white;
+                    visibility: hidden;
+                    h3{
+                      color: rgb(249, 105, 9);
+                    }
+                    p{
+                        font-size: 1.5em;
+                      font-weight:bolder ;
+                      color: rgb(253, 251, 251);
+                    }
+                    }
+                &:hover .text{
+                    visibility: visible;
+                    }
+                &:hover img{
+                    transform: scale(1.1);
+                    opacity: 25%;
+                }
+                }
         }
     }
     .section__noticias{
@@ -30,6 +74,10 @@
                 display: flex;
                 flex-direction: row;
                 gap: 10px;
+                transition: all .2s;
+                &:hover{
+                transform: scale(1.02);
+                    }
                 p{
                     background: map-get($back-color, sectionP);
                     margin: 0%;
