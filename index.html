@@ -8,13 +8,15 @@
     <link rel="shortcut icon" href="./img/pngwing.com.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="./sass/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head
 >
 <body>
 
     <!-- HEADER INICIO -->
    <header id="header">
-        <div class="header__logo">
+        <div class="header__logo animate__animated animate__fadeInLeft">
             <h1>LagganTV</h1>
             <img src="./img/pngwing.com.png" alt="logo">            
         </div>  
@@ -43,14 +45,38 @@
                     <div id="carouselExample" class="carousel slide">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img src="./img/boku.jpg" class="d-block w-100" alt="...">
+                            <div class="contenedor">
+                                <div class="image">
+                                    <img src="./img/boku.jpg" class="d-block w-100" alt="...">
+                                </div>
+                               <div class="text">
+                                  <h3>Boku No Hero</h3>
+                                  <a href="https://www.youtube.com/watch?v=exOi_zsOHwM">Ver Ahora</a>
+                               </div>
+                            </div>
                           </div>
                           <div class="carousel-item">
-                            <img src="./img/blue.jpeg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="./img/naruto.jpg" class="d-block w-100" alt="...">
-                          </div>
+                              <div class="contenedor">
+                                  <div class="image">
+                                    <img src="./img/blue.jpeg" class="d-block w-100" alt="...">
+                                 </div>
+                                 <div class="text">
+                                    <h3>Blue Lock</h3>
+                                    <a href="https://www.youtube.com/watch?v=exOi_zsOHwM">Ver Ahora</a>
+                                 </div>
+                            </div>
+                        </div>
+                            <div class="carousel-item">
+                                <div class="contenedor">
+                                    <div class="image">
+                                        <img src="./img/naruto.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="text">
+                                        <h3>Naruto</h3>
+                                        <a href="https://www.youtube.com/watch?v=exOi_zsOHwM">Ver Ahora</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -72,62 +98,62 @@
         <div class="article__series">
             <h3>Animes</h3>
             <div class="article__seriesIMG">
-                <div class="container">
+                <div class="contenedor">
                     <div class="image">
-                        <img src="./img/gurren.jpeg" alt="simon" >
+                      <img src="./img/gurren.jpeg" alt="simon" > 
                     </div>
-                    <div class="text">
-                        <h3>Gurren laggan</h3>
-                        <p>Anime</p>
-                    </div>
+                        <div class="text">
+                            <h3>Gurren laggan</h3>
+                            <a href="https://www.youtube.com/watch?v=exOi_zsOHwM">Ver Ahora</a>
+                        </div>
                 </div>
-                <div class="container">
+                <div class="contenedor">
                     <div class="image">
                         <img src="./img/DragonBall.jpeg" alt="goku">
                     </div>
             
                     <div class="text">
                         <h3>Dragon Ball</h3>
-                        <p>Anime</p>
+                        <a href="https://www.youtube.com/watch?v=exOi_zsOHwM">Ver Ahora</a>
                     </div>
                 </div>
-                <div class="container">
+                <div class="contenedor">
                     <div class="image">
                         <img src="./img/one.jpg" alt="luffy" >
                     </div>
             
                     <div class="text">
                         <h3>One piece</h3>
-                        <p>Anime</p>
+                        <a href="https://www.youtube.com/watch?v=exOi_zsOHwM">Ver Ahora</a>
                     </div>
                 </div>
-                <div class="container">
+                <div class="contenedor">
                     <div class="image">
                         <img src="./img/full.jpg" alt="roy"> 
                     </div>
             
                     <div class="text">
                         <h3>Full Metal Alchemist</h3>
-                        <p>Anime</p>
+                        <a href="https://www.youtube.com/watch?v=exOi_zsOHwM">Ver Ahora</a>
                     </div>
                 </div>
-                <div class="container">
+                <div class="contenedor">
                     <div class="image">
                         <img src="./img/naruto.jpg" alt="naruto" >
                     </div>
             
                     <div class="text">
                         <h3>Naruto</h3>
-                        <p>Anime</p>
+                        <a href="https://www.youtube.com/watch?v=exOi_zsOHwM">Ver Ahora</a>
                     </div>
                 </div>
-                <div class="container">
+                <div class="contenedor">
                     <div class="image">
                         <img src="./img/onePunchMan.jpg" alt="saitama">                    
                     </div>
                     <div class="text">
                         <h3>One punch man</h3>
-                        <p>Anime</p>
+                        <a href="https://www.youtube.com/watch?v=exOi_zsOHwM">Ver Ahora</a>
                     </div>
                 </div>                
             </div>
@@ -137,7 +163,7 @@
         </div>
     </article>
 
-    <aside id="aside">
+    <aside id="aside" class="animate__animated animate__fadeInRight">
         <article class="aside__cronograma" >
             <h3>Programacion de hoy</h3>
             <div class="crono__div">
@@ -182,7 +208,7 @@
     <!-- SECTION -->
     <section id="section">
         <article class="section__principal">
-            <h3>Novedades</h3>
+            <h3 >Novedades</h3>
             <div class="section__principalIMG">
                 <img src="./img/Chainsaw-Man.jpeg" alt="chain">
             </div>
@@ -190,7 +216,7 @@
         
         <article class="section__noticias">
             <h3>Ultimas noticias</h3>
-            <div class="section__noticiasIMG">
+            <div class="section__noticiasIMG " >
                 <div>
                     <img src="../img/lafy.jpg" alt="luffy" class="luffy">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, enim!</p>

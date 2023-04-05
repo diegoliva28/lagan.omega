@@ -18,47 +18,54 @@
             display: flex;
             flex-flow: row wrap;
             gap: 20px;
-            .container {
-                position: relative;
-                width: 32%;
-                cursor: pointer;
-                overflow: hidden;
-                &:hover .text {
-                  visibility: visible;
-                }
-                
-                &:hover img {
-                  transform: scale(1.1);
-                }
-                .image {
+            .contenedor{
+              position: relative;
+              width: 32%;
+              overflow: hidden;
+              .image{
                   width: 100%;
                   height: 100%;
-                    img{
-                        height: 100%;
-                        width: 100%;
-                        transition: 0.5s ease;
-                    }
-                }
-                
-                 .text {
-                   font-size: 1.2rem;
-                   position: absolute;
-                   top: 0;
-                   left: 0;
-                   background-color: rgb(0, 128, 183);
-                   opacity: 0.8;
-                   width: 100%;
-                   height: 100%;
-                   display: flex;
-                   align-items: center;
-                   justify-content: center;
-                   flex-direction: column;
-                   color: white;
-                   visibility: hidden;
-                   h3{
-                    margin-bottom: 1.2rem;
-                   }
-                 }
+                  img{
+                      border-radius: 5px;
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      transition: .5s ease;
+                      }
+                  }
+              .text{
+                  font-size: 1rem;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  background-color: rgba(48, 166, 250, 0.474);
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-direction: column;
+                  color: white;
+                  visibility: hidden;
+                  h3{
+                    color: white;
+                      margin-bottom: 1.2rem;
+                  }
+                  a{
+                    font-weight:bolder ;
+                    border-radius: 10px;
+                    padding: 7px;
+                    background-color: rgb(255, 255, 255);
+                    color: rgb(212, 7, 7);
+                    text-decoration: none;
+                  }
+                  }
+              &:hover .text{
+                  visibility: visible;
+                  }
+              &:hover img{
+                  transform: scale(1.1);
+              }
               }
             }  
         .article__btn{
