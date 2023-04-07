@@ -5,6 +5,10 @@
 #aside{
     grid-area: aside;
     margin:0 10px;
+    @include Mobile{
+        background-color: rgb(39, 156, 235);
+        margin: 0%;
+    }
     .aside__cronograma{
         display: flex;
         flex-direction: column;

@@ -224,6 +224,12 @@ body {
   grid-area: aside;
   margin: 0 10px;
 }
+@media (max-width: 560px) {
+  #aside {
+    background-color: rgb(39, 156, 235);
+    margin: 0%;
+  }
+}
 #aside .aside__cronograma {
   display: flex;
   flex-direction: column;
@@ -380,6 +386,11 @@ body {
 }
 #section .section__noticias .section__noticiasIMG div:hover {
   transform: scale(1.02);
+}
+@media (max-width: 560px) {
+  #section .section__noticias .section__noticiasIMG div img {
+    width: 150px;
+  }
 }
 #section .section__noticias .section__noticiasIMG div p {
   background: rgb(151, 239, 255);
