@@ -152,6 +152,7 @@ body{
                 }
                 img{
                     width: 30%;
+                    object-fit:cover;
                 } 
             }
         }
@@ -174,7 +175,14 @@ body{
             .main__noticiasDiv{
                 flex-direction: column;
                 div{
-                    width: 100%
+                    width: 100%;
+                    img{
+                        width: 130px;
+                        height: 150px;
+                    }
+                    p{
+                        font-size: 0.7em;
+                    }
                 }
             }
         }
@@ -227,6 +235,10 @@ body{
                     }
                     img{
                         width: 100%;
+                        height: 200px;
+                        @include Mobile{
+                            height: 100px;
+                        }
                     }
                     div{
                         min-width: 200px;

@@ -51,6 +51,14 @@
                       font-weight:bolder ;
                       color: rgb(253, 251, 251);
                     }
+                    @include Mobile{
+                        h3{
+                            font-size: 1.5em;
+                        }
+                        p{
+                            font-size: 1em;
+                        }
+                    }
                     }
                 &:hover .text{
                     visibility: visible;
@@ -75,6 +83,15 @@
                 display: flex;
                 flex-direction: row;
                 gap: 10px;
+                img{
+                    width: 150px;
+                    height: 165px;
+                    @include Mobile{
+                        width: 100px;
+                        height: 120px;
+                    }
+                    
+                }
                 transition: all .2s;
                 &:hover{
                 transform: scale(1.02);
@@ -87,7 +104,12 @@
                 p{
                     background: map-get($back-color, sectionP);
                     margin: 0%;
+                    padding: 10px;
                     border: $border;
+                    font-size: 1em;
+                    @include Mobile{
+                        font-size: 0.8em;
+                    }
                 }
             }
         }

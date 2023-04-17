@@ -212,6 +212,8 @@ body {
 }
 .mainNoticias .main__noticias .main__noticiasDiv div img {
   width: 30%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 560px) {
   .mainNoticias {
@@ -234,6 +236,13 @@ body {
   }
   .mainNoticias .main__noticias .main__noticiasDiv div {
     width: 100%;
+  }
+  .mainNoticias .main__noticias .main__noticiasDiv div img {
+    width: 130px;
+    height: 150px;
+  }
+  .mainNoticias .main__noticias .main__noticiasDiv div p {
+    font-size: 0.7em;
   }
 }
 
@@ -286,6 +295,12 @@ body {
 }
 .container-fluid .tamaño div .apila .list img {
   width: 100%;
+  height: 200px;
+}
+@media (max-width: 560px) {
+  .container-fluid .tamaño div .apila .list img {
+    height: 100px;
+  }
 }
 .container-fluid .tamaño div .apila .list div {
   min-width: 200px;
