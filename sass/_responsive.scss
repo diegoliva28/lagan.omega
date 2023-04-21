@@ -1,7 +1,89 @@
 /* RESPONSIVE */
-
 @import "variables";
+@import "mixins";
 
+/* TABLET */
+@include tablet{
+    body{
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "main main"
+        "article article"
+        "aside aside"
+        "section section"
+        "footer footer";
+    
+        grid-template-columns:1fr 2fr ;
+        grid-template-rows: repeat(6,auto);
+    }
+
+    #header{
+        grid-template-columns: 1fr 4fr;       
+        .header__logo{
+            padding: 5px 10px;
+        }
+        .header__nav{
+            ul{
+                padding: 10px;
+                gap: 10px;
+                border: none;
+                li{
+                    a{
+                        font-size: 1.6em;
+                        @media (min-width:601px) and (max-width:700px){
+                            &{
+                                font-size: 1.2em;}
+                        }
+                    }
+                }
+               
+            }
+        }
+        .header__login{
+            display: none;
+        }
+    }
+
+    #article{
+        padding: 0%;
+       .article__series{
+        h3{
+            padding: 0 20px;
+        }
+        .article__seriesIMG{        
+            justify-content: center;
+            .contenedor{
+                width: 30%;
+                .text{
+                    @media (min-width:601px) and (max-width:800px){
+                        &{
+                            font-size: 0.7em;}
+                    }
+                }
+            }
+        }
+       }
+    }
+
+    #aside{
+        .aside__cronograma{
+            display: none;
+        }
+        .aside__notificacion{
+            margin: 20px 70px;
+        }
+    }
+    
+    #section{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+/* MOBILE */
 @media (max-width:$mobile) {
     body{
         grid-template-areas:
@@ -10,9 +92,8 @@
         "section"
         "aside"
         "footer";
-        grid-template-columns: 1fr;
-/*         grid-template-rows: repeat(5,auto)
- */    }
+        grid-template-columns: 1fr; 
+    }
    
     #header{
         border: none;

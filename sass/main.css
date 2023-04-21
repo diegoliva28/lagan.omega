@@ -47,8 +47,6 @@ body {
   width: 130px;
   animation-name: gurren;
   animation-duration: 1s;
-  /*             animation-iteration-count: 10;
-   */
 }
 #header .header__logo :hover {
   color: white;
@@ -122,6 +120,11 @@ body {
   color: black;
   font-size: 3em;
 }
+@media (min-width: 601px) and (max-width: 800px) {
+  #main .carousel .contenedor .text h3 {
+    font-size: 2em;
+  }
+}
 #main .carousel .contenedor .text a {
   font-size: 1em;
   font-weight: bolder;
@@ -135,7 +138,7 @@ body {
   visibility: visible;
   background-color: rgba(255, 255, 255, 0.45);
 }
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   #main {
     display: none;
   }
@@ -155,7 +158,7 @@ body {
 #article .article__series h3 {
   font-size: 2em;
 }
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   #article .article__series h3 {
     display: none;
   }
@@ -224,7 +227,7 @@ body {
   grid-area: aside;
   margin: 0 10px;
 }
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   #aside {
     background-color: rgb(39, 156, 235);
     margin: 0%;
@@ -234,7 +237,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   #aside .aside__cronograma {
     display: none;
   }
@@ -363,7 +366,15 @@ body {
   font-weight: bolder;
   color: rgb(253, 251, 251);
 }
-@media (max-width: 560px) {
+@media (min-width: 601px) and (max-width: 750px) {
+  #section .section__principal .section__principalIMG .contenedor .text h3 {
+    font-size: 1.5em;
+  }
+  #section .section__principal .section__principalIMG .contenedor .text p {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 600px) {
   #section .section__principal .section__principalIMG .contenedor .text h3 {
     font-size: 1.5em;
   }
@@ -397,7 +408,7 @@ body {
   width: 150px;
   height: 165px;
 }
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   #section .section__noticias .section__noticiasIMG div img {
     width: 100px;
     height: 120px;
@@ -406,7 +417,7 @@ body {
 #section .section__noticias .section__noticiasIMG div:hover {
   transform: scale(1.02);
 }
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   #section .section__noticias .section__noticiasIMG div img {
     width: 150px;
   }
@@ -418,7 +429,7 @@ body {
   border: 3px solid black;
   font-size: 1em;
 }
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   #section .section__noticias .section__noticiasIMG div p {
     font-size: 0.8em;
   }
@@ -464,12 +475,77 @@ body {
 }
 
 /* RESPONSIVE */
-@media (max-width: 560px) {
+/* TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-areas: "header header" "main main" "article article" "aside aside" "section section" "footer footer";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(6, auto);
+  }
+  #header {
+    grid-template-columns: 1fr 4fr;
+  }
+  #header .header__logo {
+    padding: 5px 10px;
+  }
+  #header .header__nav ul {
+    padding: 10px;
+    gap: 10px;
+    border: none;
+  }
+  #header .header__nav ul li a {
+    font-size: 1.6em;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) and (min-width: 601px) and (max-width: 700px) {
+  #header .header__nav ul li a {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  #header .header__login {
+    display: none;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  #article {
+    padding: 0%;
+  }
+  #article .article__series h3 {
+    padding: 0 20px;
+  }
+  #article .article__series .article__seriesIMG {
+    justify-content: center;
+  }
+  #article .article__series .article__seriesIMG .contenedor {
+    width: 30%;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) and (min-width: 601px) and (max-width: 800px) {
+  #article .article__series .article__seriesIMG .contenedor .text {
+    font-size: 0.7em;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  #aside .aside__cronograma {
+    display: none;
+  }
+  #aside .aside__notificacion {
+    margin: 20px 70px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  #section {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* MOBILE */
+@media (max-width: 600px) {
   body {
     grid-template-areas: "header" "article" "section" "aside" "footer";
     grid-template-columns: 1fr;
-    /*         grid-template-rows: repeat(5,auto)
-     */
   }
   #header {
     border: none;

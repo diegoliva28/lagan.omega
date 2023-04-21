@@ -1,5 +1,6 @@
 @import "variables";
 @import "animation";
+@import "mixins";
 
 #header{
     border-bottom: $border;
@@ -18,9 +19,7 @@
         img{
             width: 130px;
             animation-name: gurren;
-            animation-duration: 1s;
-/*             animation-iteration-count: 10;
- */        
+            animation-duration: 1s;    
         }
         :hover{
             color: white;
