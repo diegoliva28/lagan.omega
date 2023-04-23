@@ -1,4 +1,64 @@
 @import "variables";
+@import "mixins";
+
+/* TABLET */
+
+/* TABLET */
+@include tablet{
+    #header{
+        grid-template-columns: 1fr 4fr;       
+        .header__logo{
+            padding: 5px 10px;
+        }
+        .header__nav{
+            ul{
+                padding: 10px;
+                gap: 10px;
+                border: none;
+                li{
+                    a{
+                        font-size: 1.6em;
+                        @media (min-width:601px) and (max-width:700px){
+                            &{
+                                font-size: 1.2em;}
+                        }
+                    }
+                }
+               
+            }
+        }
+        .header__login{
+            display: none;
+        }
+    }
+    #footer{
+        @media (min-width:601px) and (max-width:700px) {
+            &{
+                .footer__logo{
+                    a{
+                        img{
+                            width: 130px;
+                        }
+                    }
+                }
+                .footer__redes{
+                    a{
+                        img{
+                            width: 30px;
+                        }
+                    }
+                }
+                .footer__txt{
+                    p{
+                        font-size: .8em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* MOBILE */
 @media (max-width:$mobile) {
     #header{
         border: none;

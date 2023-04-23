@@ -89,7 +89,21 @@ body{
               transform: scale(1.1);
           }
           }
-        }  
+        }
+    @include tablet{
+        &{
+            padding: 10px 20px;
+            h2{
+                font-size: 2em;
+            }
+            .mainAnime__serie{
+                gap: 10px;
+                .contenedor{
+                    width: 32%;
+                }
+            }
+        }
+    }
     @include Mobile{
         &{
             flex-direction: column;
@@ -151,9 +165,39 @@ body{
                  transform: scale(1.05);
                 }
                 img{
-                    width: 30%;
-                    object-fit:cover;
+                    width: 150px;
+                    object-fit: cover;
                 } 
+            }
+        }
+    }
+    @include tablet{
+        padding: 5px 20px;
+        .main__video{
+            h2{
+                font-size: 2em
+            }
+            .main__iframe{
+                width: 100%;
+                iframe{
+                    height: 400px
+                }
+            }
+        }
+        .main__noticias{
+            margin: 10px 0;
+            .main__noticiasDiv{
+                flex-direction: column;
+                div{
+                    width: 100%;
+                    img{
+                        width: 130px;
+                        height: 150px;
+                    }
+                    p{
+                        font-size: .8em;
+                    }
+                }
             }
         }
     }
@@ -196,6 +240,9 @@ body{
     h2{
         font-size: 3em;
         margin:1% 0 ;
+        @include tablet{
+            font-size: 2em;
+        }
         @include Mobile{
                 font-size: 2em;
                 margin-bottom: 10px;
@@ -211,7 +258,7 @@ body{
             text-align: center;
             a{
                 font-size: 20px;
-                margin: 0% 2%;
+                margin: 0 2%;
             }
         }
         div{
@@ -247,6 +294,26 @@ body{
                         }
                         p{
                             margin: 0%;
+                        }
+                    }
+                }
+            }
+        }
+        @include tablet{
+            .dias{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+            div{
+                .apila{
+                    flex-direction: column;
+                    .list{
+                        flex-direction: row;
+                        gap: 10px;
+                        img{
+                            width: 200px
                         }
                     }
                 }

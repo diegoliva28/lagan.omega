@@ -153,6 +153,20 @@ body {
 .mainAnime .mainAnime__serie .contenedor:hover img {
   transform: scale(1.1);
 }
+@media (min-width: 601px) and (max-width: 1024px) {
+  .mainAnime {
+    padding: 10px 20px;
+  }
+  .mainAnime h2 {
+    font-size: 2em;
+  }
+  .mainAnime .mainAnime__serie {
+    gap: 10px;
+  }
+  .mainAnime .mainAnime__serie .contenedor {
+    width: 32%;
+  }
+}
 @media (max-width: 600px) {
   .mainAnime {
     flex-direction: column;
@@ -209,9 +223,39 @@ body {
   transform: scale(1.05);
 }
 .mainNoticias .main__noticias .main__noticiasDiv div img {
-  width: 30%;
+  width: 150px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .mainNoticias {
+    padding: 5px 20px;
+  }
+  .mainNoticias .main__video h2 {
+    font-size: 2em;
+  }
+  .mainNoticias .main__video .main__iframe {
+    width: 100%;
+  }
+  .mainNoticias .main__video .main__iframe iframe {
+    height: 400px;
+  }
+  .mainNoticias .main__noticias {
+    margin: 10px 0;
+  }
+  .mainNoticias .main__noticias .main__noticiasDiv {
+    flex-direction: column;
+  }
+  .mainNoticias .main__noticias .main__noticiasDiv div {
+    width: 100%;
+  }
+  .mainNoticias .main__noticias .main__noticiasDiv div img {
+    width: 130px;
+    height: 150px;
+  }
+  .mainNoticias .main__noticias .main__noticiasDiv div p {
+    font-size: 0.8em;
+  }
 }
 @media (max-width: 600px) {
   .mainNoticias {
@@ -251,6 +295,11 @@ body {
   font-size: 3em;
   margin: 1% 0;
 }
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container-fluid h2 {
+    font-size: 2em;
+  }
+}
 @media (max-width: 600px) {
   .container-fluid h2 {
     font-size: 2em;
@@ -269,7 +318,7 @@ body {
 }
 .container-fluid .tamaño .dias a {
   font-size: 20px;
-  margin: 0% 2%;
+  margin: 0 2%;
 }
 .container-fluid .tamaño div h3 {
   font-size: 2em;
@@ -308,6 +357,24 @@ body {
 }
 .container-fluid .tamaño div .apila .list div p {
   margin: 0%;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container-fluid .tamaño .dias {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  .container-fluid .tamaño div .apila {
+    flex-direction: column;
+  }
+  .container-fluid .tamaño div .apila .list {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .container-fluid .tamaño div .apila .list img {
+    width: 200px;
+  }
 }
 @media (max-width: 600px) {
   .container-fluid .tamaño .dias {
@@ -397,6 +464,46 @@ body {
   line-height: 10px;
 }
 
+/* TABLET */
+/* TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+  #header {
+    grid-template-columns: 1fr 4fr;
+  }
+  #header .header__logo {
+    padding: 5px 10px;
+  }
+  #header .header__nav ul {
+    padding: 10px;
+    gap: 10px;
+    border: none;
+  }
+  #header .header__nav ul li a {
+    font-size: 1.6em;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) and (min-width: 601px) and (max-width: 700px) {
+  #header .header__nav ul li a {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  #header .header__login {
+    display: none;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) and (min-width: 601px) and (max-width: 700px) {
+  #footer .footer__logo a img {
+    width: 130px;
+  }
+  #footer .footer__redes a img {
+    width: 30px;
+  }
+  #footer .footer__txt p {
+    font-size: 0.8em;
+  }
+}
+/* MOBILE */
 @media (max-width: 600px) {
   #header {
     border: none;
