@@ -1,0 +1,97 @@
+@import "mixins";
+@import "variables";
+@import "animation";
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background: map-get($back-color, body ) !important;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.boton{
+    padding: 10px;
+    text-decoration: none;
+    background-color: map-get($back-color , boton );
+    border-radius: $radius;
+    cursor: pointer;
+    font-size: 1.5em;
+    &:hover{
+        background: map-get($back-color, hover );
+    }
+}
+
+@import "header";
+
+/* MAIN */
+
+#main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .title{
+        width: 52.5%;
+        margin: 20px 0;
+    }
+    .iframe{
+        width: 52%;
+        height: 600px;
+        div{
+            width: 100%;
+            height: 100%;
+        }
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .text{
+        background-color: rgb(41, 222, 246);
+        width: 52%;
+        padding: 10px;
+        border:$border;
+        margin-bottom:10px; 
+    }
+    
+}
+
+@import "footer";
+@import "RespoMobile"; 
+
+/* Responsive */
+@include tablet{
+    #main{
+        padding:0 10px;
+        .title{
+            width: 100%;
+        }
+        .iframe{
+            width: 100%;
+            height: 450px;
+        }
+        .text{
+            width: 100%;
+        }
+    }
+}
+@include Mobile{
+    #main{
+        padding:0 10px;
+        .title{
+            width: 100%;
+        }
+        .iframe{
+            width: 100%;
+            height: 450px;
+        }
+        .text{
+            width: 100%;
+        }
+    }
+}
